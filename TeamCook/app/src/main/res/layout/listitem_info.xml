@@ -55,7 +55,7 @@
                     android:textColor="#ffffff"
                     android:text="2018.7.26"
                     />
-                <view
+                <View
                     android:layout_width="0dp"
                     android:layout_height="2dp"/>
                 <TextView
@@ -97,7 +97,7 @@
                     android:text="팀 찾기"
                     android:background="@drawable/button"
                     />
-                <view
+                <View
                     android:layout_width="4dp"
                     android:layout_height="0dp"/>
                 <Button

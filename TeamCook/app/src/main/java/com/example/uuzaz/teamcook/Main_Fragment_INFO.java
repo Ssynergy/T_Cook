@@ -3,7 +3,7 @@ package com.example.uuzaz.teamcook;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Main_Fragment_INFO extends ListFragment {
+public class Main_Fragment_INFO extends Fragment {
 
     /*//ListView01
     static final String[] LIST_MENU = {"LIST1", "LIST2", "LIST3"};*/
@@ -23,9 +23,10 @@ public class Main_Fragment_INFO extends ListFragment {
     //ListVIew00
     //private ArrayList<Info_ListItem> data = null;
 
-    //ListView02
-    Info_ListViewAdapter adapter;
-    ListView listView;
+
+
+    public Main_Fragment_INFO() {
+    }
 
 
     @Override
@@ -40,10 +41,15 @@ public class Main_Fragment_INFO extends ListFragment {
         ListView listView = (ListView) view.findViewById(R.id.list_info);
         listView.setAdapter(adapter);*/
 
+        //ListView02
+        Info_ListViewAdapter adapter;
+        ListView listView;
 
         //ListView02
-        // Adapter 생성 및 Adapter 지정.
+        // Adapter 생성
         adapter = new Info_ListViewAdapter() ;
+
+        // 리스트뷰 참조 및 Adapter달기
         listView = (ListView) view.findViewById(R.id.list_info) ;
         listView.setAdapter(adapter) ;
 
@@ -74,8 +80,8 @@ public class Main_Fragment_INFO extends ListFragment {
         }) ;
 */
 
-        return super.onCreateView(inflater, container, savedInstanceState);
-        //return view;
+        //return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
 
 
 
@@ -96,20 +102,8 @@ public class Main_Fragment_INFO extends ListFragment {
 
     //ListView02
 
-   /* @Override
-    public void onListItemClick (ListView l, View v, int position, long id) {
-        // get TextView's Text.
-        Info_ListItem item = (Info_ListItem) l.getItemAtPosition(position) ;
 
-        Drawable iconDrawable = item.getIcon() ;
-        String the_dayStr = item.getThe_day() ;
-        String d_dayStr = item.getD_day() ;
-        String titleStr = item.getTitle() ;
-
-
-    }
-
-    public void addItem(Drawable icon, String the_day, String d_day, String title) {
+  /*  public void addItem(Drawable icon, String the_day, String d_day, String title) {
         adapter.addItem(icon, the_day,d_day, title);
     }*/
 
