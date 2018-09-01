@@ -22,7 +22,6 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         btn_back = (ImageButton) findViewById(R.id.id_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("WrongConstant")
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChatActivity.this, MainActivity.class);
