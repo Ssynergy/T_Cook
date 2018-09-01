@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class Info_ListItem {
+    private Drawable i_btn01Drawable;
     private Drawable iconDrawable;
     private String titleStr;
     private String d_dayStr;
@@ -15,6 +16,9 @@ public class Info_ListItem {
     public void setIcon(Drawable icon) {
         iconDrawable = icon;
     }
+   /* public void setI_btn01(Drawable i_btn01) {
+        i_btn01Drawable = i_btn01;
+    }*/
 
     public void setThe_day(String the_day) {
         the_dayStr = the_day;
@@ -29,6 +33,9 @@ public class Info_ListItem {
     }
 
 
+    /*public Drawable getI_btn01() {
+        return this.i_btn01Drawable;
+    }*/
 
     public Drawable getIcon() {
         return this.iconDrawable;

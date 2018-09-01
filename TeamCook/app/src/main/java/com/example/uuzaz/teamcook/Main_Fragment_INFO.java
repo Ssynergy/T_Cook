@@ -62,6 +62,16 @@ public class Main_Fragment_INFO extends Fragment {
         // 세 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.info_pic02),
                 "2018-09-24", "D - 18", "Start up, Step up 꿈터 경진대회") ;
+        // 네 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.info_pic03),
+                "2018-10-19", "D - 35", "창업동아리") ;
+        // 다섯 번째 아이템 추가.
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.info_pic04),
+                "2018-11-28", "D - 51", "장영실 공모전") ;
+
+
+
+
 
        /* // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
