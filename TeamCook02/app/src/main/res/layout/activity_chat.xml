@@ -13,8 +13,8 @@
         <ImageButton
             android:id="@+id/id_back"
             android:layout_marginLeft="10dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
             android:layout_centerVertical="true"
             android:backgroundTint="#ffffff"
@@ -24,8 +24,8 @@
 
         <ImageView
             android:layout_centerInParent="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
             android:src="@drawable/icon_logo" />
     </RelativeLayout>
 

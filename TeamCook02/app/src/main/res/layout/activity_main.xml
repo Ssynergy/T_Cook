@@ -14,8 +14,8 @@
         <ImageButton
             android:id="@+id/id_profile"
             android:layout_marginLeft="10dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
             android:layout_centerVertical="true"
             android:backgroundTint="#ffffff"
@@ -25,21 +25,25 @@
 
         <ImageView
             android:layout_centerInParent="true"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
             android:src="@drawable/icon_logo" />
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:background="@drawable/round_background">
         <EditText
-            android:padding="15dp"
+            android:id="@+id/search_bar"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
             android:drawableEnd="@drawable/icon_search"
-            android:background="@drawable/round_background"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@null"/>
     </LinearLayout>
     <!--Custom Toolbar-->
 

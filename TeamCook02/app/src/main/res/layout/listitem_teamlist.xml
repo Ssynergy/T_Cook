@@ -23,25 +23,13 @@
                 android:background="@drawable/circle"
                 android:gravity="center">
                 <TextView
-                    android:id="@+id/summit_counter"
+                    android:id="@+id/contest_day"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#ffffff"
-                    android:textSize="20dp"
-                    android:text="1" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp"
-                    android:text="/" />
-                <TextView
-                    android:id="@+id/team_number_full"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-                    android:textSize="20dp"
-                    android:text="5" />
+                    android:textSize="16dp"
+                    android:text="10/26" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -51,31 +39,31 @@
             android:layout_weight="9"
             android:orientation="vertical">
             <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center_vertical"
-            android:layout_marginTop="10dp">
-                <TextView
-                android:id="@+id/team_search_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#090909"
-                android:textSize="17dp"
-                android:text="해커톤 공모전 같이 준비해요~!"/>
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/team_list_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#090909"
+                    android:textSize="17dp"
+                    android:text="해커톤 공모전 같이 준비해요~!"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="25dp"
-                android:weightSum="5.6"
+                android:weightSum="5"
                 android:layout_marginBottom="5dp"
                 android:layout_gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.8"
+                    android:layout_weight="1"
                     android:gravity="center_vertical">
                     <TextView
-                        android:id="@+id/d_day_team_search"
+                        android:id="@+id/d_day_team_list"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="#cccccc"
@@ -86,41 +74,50 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.8"
+                    android:layout_weight="1"
                     android:gravity="right|center_vertical">
-                    <TextView
-                        android:id="@+id/team_leader"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:layout_width="12dp"
                         android:layout_height="wrap_content"
-                        android:textColor="#faa285"
-                        android:text="팀장"
-                        android:textSize="12dp"
+                        android:src="@drawable/icon_person"
                         />
                     <View
-                        android:layout_width="5dp"
+                        android:layout_width="3dp"
                         android:layout_height="0dp"/>
                     <TextView
-                        android:id="@+id/team_leader_name"
+                        android:id="@+id/team_member"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#050505"
-                        android:text="김기현"
-                        android:textSize="12dp"
+                        android:text="7"
                         android:layout_marginRight="10dp"
                         />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="3"
                     android:gravity="center_vertical">
                     <Button
-                        android:id="@+id/team_summit_btn"
-                        android:layout_width="80dp"
+                        android:id="@+id/feedback_btn"
+                        android:layout_width="65dp"
                         android:layout_height="22dp"
                         android:textColor="#0a0a0a"
-                        android:textSize="12dp"
-                        android:text="신청하기"
+                        android:textSize="11dp"
+                        android:text="피드백"
+                        android:background="@drawable/button"
+                        android:backgroundTint="#faa285"
+                        />
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp"/>
+                    <Button
+                        android:id="@+id/chatting_btn"
+                        android:layout_width="65dp"
+                        android:layout_height="22dp"
+                        android:textColor="#0a0a0a"
+                        android:textSize="11dp"
+                        android:text="채팅"
                         android:background="@drawable/button"
                         android:backgroundTint="#faa285"
                         />
@@ -135,6 +132,4 @@
         android:layout_height="1dp"
         android:background="#faa285">
     </LinearLayout>
-
-
 </LinearLayout>
