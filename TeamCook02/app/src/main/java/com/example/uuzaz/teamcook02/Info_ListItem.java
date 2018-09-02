@@ -1,4 +1,4 @@
-package com.example.uuzaz.teamcook;
+package com.example.uuzaz.teamcook02;
 
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -13,9 +13,7 @@ public class Info_ListItem {
     private String d_dayStr;
     private String the_dayStr;
 
-    public void setI_btn(Drawable i_btn) {
-        i_btnDrawable = i_btn;
-    }
+    public void setI_btn(Drawable i_btn) { i_btnDrawable = i_btn; }
 
     public void setIcon(Drawable icon) {
         iconDrawable = icon;
@@ -34,9 +32,8 @@ public class Info_ListItem {
     }
 
 
-    public Drawable getI_btn() {
-        return this.i_btnDrawable;
-    }
+
+    public Drawable getI_btn() { return this.i_btnDrawable; }
 
     public Drawable getIcon() {
         return this.iconDrawable;

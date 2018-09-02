@@ -32,7 +32,7 @@
 
     </RelativeLayout>
     <LinearLayout
-        android:background="@drawable/gra"
+        android:background="@drawable/gradation"
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <LinearLayout

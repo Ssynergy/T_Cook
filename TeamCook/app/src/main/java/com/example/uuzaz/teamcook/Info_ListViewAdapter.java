@@ -39,8 +39,8 @@ public class Info_ListViewAdapter extends BaseAdapter {
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-        //ImageButton i_btn01ImageButton = (ImageButton) convertView.findViewById(R.id.info_picture_s) ;
-        ImageView iconImageView = (ImageView) convertView.findViewById(R.id.info_picture_s) ;
+        ImageButton i_btnImageButton = (ImageButton) convertView.findViewById(R.id.info_picture_s) ;
+        //ImageView iconImageView = (ImageView) convertView.findViewById(R.id.info_picture_s) ;
         TextView the_dayTextView = (TextView) convertView.findViewById(R.id.info_date) ;
         TextView d_dayTextView = (TextView) convertView.findViewById(R.id.d_day) ;
         TextView titleTextView = (TextView) convertView.findViewById(R.id.info_name_output) ;
@@ -49,8 +49,8 @@ public class Info_ListViewAdapter extends BaseAdapter {
        Info_ListItem info_listItem = listViewItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
-        //i_btn01ImageButton.setImageDrawable(info_listItem.getI_btn01());
-        iconImageView.setImageDrawable(info_listItem.getIcon());
+        i_btnImageButton.setImageDrawable(info_listItem.getI_btn());
+        //iconImageView.setImageDrawable(info_listItem.getIcon());
         the_dayTextView.setText(info_listItem.getThe_day());
         d_dayTextView.setText(info_listItem.getD_day());
         titleTextView.setText(info_listItem.getTitle());
@@ -71,11 +71,11 @@ public class Info_ListViewAdapter extends BaseAdapter {
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem( Drawable icon, String the_day, String d_day, String title ) {
+    public void addItem( Drawable i_btn, String the_day, String d_day, String title ) {
         Info_ListItem item = new Info_ListItem();
 
-        //item.setI_btn01(i_btn01);
-        item.setIcon(icon);
+        item.setI_btn(i_btn);
+       // item.setIcon(icon);
         item.setThe_day(the_day);
         item.setD_day(d_day);
         item.setTitle(title);

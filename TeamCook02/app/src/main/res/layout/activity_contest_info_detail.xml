@@ -33,12 +33,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         android:scrollbars="none">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -52,27 +51,36 @@
                     android:id="@+id/info_picture"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/info_pic" />
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/info_pic"
+                    />
 
+                <!--android:background="@drawable/round_border_1"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+-->
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignRight="@id/info_picture"
                     android:layout_marginRight="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="20dp"
                     android:src="@drawable/icon_love" />
 
                 <RelativeLayout
-                    android:layout_marginLeft="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/info_picture">
+                    android:layout_below="@id/info_picture"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/round_border_1"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
 
                     <RelativeLayout
                         android:id="@+id/line1"
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        >
+                        android:layout_height="40dp">
 
                         <TextView
                             android:id="@+id/info_name"
@@ -81,11 +89,12 @@
                             android:gravity="center_vertical"
                             android:text="공모전명 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_name_input"
-                            android:layout_toRightOf="@id/info_name"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@id/info_name"
                             android:gravity="center_vertical"
                             android:text="인천시 SNS 통합명칭 공모전 "
                             android:textSize="15dp" />
@@ -105,11 +114,12 @@
                             android:gravity="center_vertical"
                             android:text="마감날짜 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_dadline_input"
-                            android:layout_toRightOf="@id/info_dadline"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@id/info_dadline"
                             android:gravity="center_vertical"
                             android:text="2018. 7. 26"
                             android:textSize="15dp" />
@@ -128,11 +138,12 @@
                             android:gravity="center_vertical"
                             android:text="주최 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_host_input"
-                            android:layout_toRightOf="@id/info_host"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@id/info_host"
                             android:gravity="center_vertical"
                             android:text="인천광역시"
                             android:textSize="15dp" />
@@ -151,11 +162,12 @@
                             android:gravity="center_vertical"
                             android:text="공모주제 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_topic_input"
-                            android:layout_toRightOf="@id/info_topic"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@id/info_topic"
                             android:gravity="center_vertical"
                             android:text=" 인천시 SNS 이름짓기"
                             android:textSize="15dp" />
@@ -174,11 +186,12 @@
                             android:gravity="center_vertical"
                             android:text="결과 발표 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_resultday_input"
-                            android:layout_toRightOf="@id/info_resultday"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@id/info_resultday"
                             android:gravity="center_vertical"
                             android:text="2018. 9 .6"
                             android:textSize="15dp" />
@@ -197,11 +210,12 @@
                             android:gravity="center_vertical"
                             android:text="생성된 팀 수 : "
                             android:textSize="15dp" />
+
                         <TextView
                             android:id="@+id/info_teamnumber_input"
-                            android:layout_toRightOf="@+id/info_teamnumber"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_toRightOf="@+id/info_teamnumber"
                             android:gravity="center_vertical"
                             android:text="40"
                             android:textSize="15dp" />
@@ -212,7 +226,7 @@
 
             </RelativeLayout>
         </RelativeLayout>
-        </LinearLayout>
+
     </ScrollView>
 
 
