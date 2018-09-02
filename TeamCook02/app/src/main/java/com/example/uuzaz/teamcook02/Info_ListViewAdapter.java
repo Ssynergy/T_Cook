@@ -84,20 +84,27 @@ public class Info_ListViewAdapter extends ArrayAdapter implements View.OnClickLi
 
 
 
+       /* // button1 클릭 시 TextView(textView1)의 내용 변경.
+        Button button0 = (Button) convertView.findViewById(R.id.info_picture_s);
+        button0.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                //titleTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
+            }
+        });
 
 
         // button1 클릭 시 TextView(textView1)의 내용 변경.
         Button button1 = (Button) convertView.findViewById(R.id.team_search);
         button1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                titleTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
+                //titleTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
             }
         });
 
         // button2의 TAG에 position값 지정. Adapter를 click listener로 지정.
         Button button2 = (Button) convertView.findViewById(R.id.team_create);
         button2.setTag(position);
-        button2.setOnClickListener(this);
+        button2.setOnClickListener(this);*/
 
 
         return convertView;
