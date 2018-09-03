@@ -90,7 +90,7 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
 
         View view = inflater.inflate(R.layout.fragment_main__fragment__info, null);
 
-        Button info = (Button) view.findViewById(R.id.btn_contest_info);
+        /*Button info = (Button) view.findViewById(R.id.btn_contest_info);
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,7 +106,7 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
                 Intent intent = new Intent(getActivity(), CreateTeamActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
         /*//ListView01
@@ -200,7 +200,10 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
 
     @Override
     public void onListBtnClick(int position) {
-        Toast.makeText(getActivity(), Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+        Intent intent = new Intent(getActivity(), ContestInfoDetail.class);
+        startActivity(intent);
+
+        //Toast.makeText(getActivity(), Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
     }
 
     //ListView02

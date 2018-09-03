@@ -1,6 +1,7 @@
 package com.example.uuzaz.teamcook02;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -84,27 +85,48 @@ public class Info_ListViewAdapter extends ArrayAdapter implements View.OnClickLi
 
 
 
-       /* // button1 클릭 시 TextView(textView1)의 내용 변경.
+       /* Button info = (Button) view.findViewById(R.id.btn_contest_info);
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ContestInfoDetail.class);
+                startActivity(intent);
+            }
+        });
+
+        Button start = (Button) view.findViewById(R.id.btn_create_team_temp);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CreateTeamActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+
+
+      /*  // button1 클릭 시 TextView(textView1)의 내용 변경.
         Button button0 = (Button) convertView.findViewById(R.id.info_picture_s);
         button0.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 //titleTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
             }
         });
-
+*/
 
         // button1 클릭 시 TextView(textView1)의 내용 변경.
-        Button button1 = (Button) convertView.findViewById(R.id.team_search);
+        Button button1 = (Button) convertView.findViewById(R.id.team_search_btn);
         button1.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
+
                 //titleTextView.setText(Integer.toString(pos + 1) + "번 아이템 선택.");
             }
         });
 
         // button2의 TAG에 position값 지정. Adapter를 click listener로 지정.
-        Button button2 = (Button) convertView.findViewById(R.id.team_create);
+        Button button2 = (Button) convertView.findViewById(R.id.team_create_btn);
         button2.setTag(position);
-        button2.setOnClickListener(this);*/
+        button2.setOnClickListener(this);
 
 
         return convertView;
