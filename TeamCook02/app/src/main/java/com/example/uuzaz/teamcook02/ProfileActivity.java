@@ -31,8 +31,8 @@ public class ProfileActivity extends AppCompatActivity {
                         return new Profile_Fragment_First();
                     case 1:
                         return new Profile_Fragment_Second();
-                    case 2:
-                        return new Profile_Fragment_Third();
+                    /*case 2:
+                        return new Profile_Fragment_Third(); */
                     default:
                         return null;
                 }
@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 3;
+                return 2;
             }
         }
 

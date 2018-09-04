@@ -63,6 +63,7 @@ public class CreateTeamActivity extends AppCompatActivity implements View.OnClic
             public void onClick(View v) {
                 Intent intent = new Intent(CreateTeamActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

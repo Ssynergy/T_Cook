@@ -31,6 +31,7 @@ public class MainProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainProfileActivity.this, ChatActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

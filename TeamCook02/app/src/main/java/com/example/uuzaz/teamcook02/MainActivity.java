@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         btn_profile = (ImageButton) findViewById(R.id.id_profile);
         btn_profile.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("WrongConstant")
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainProfileActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

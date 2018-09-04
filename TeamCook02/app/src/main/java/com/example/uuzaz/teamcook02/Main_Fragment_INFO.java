@@ -90,7 +90,7 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
 
         View view = inflater.inflate(R.layout.fragment_main__fragment__info, null);
 
-        /*Button info = (Button) view.findViewById(R.id.btn_contest_info);
+        Button info = (Button) view.findViewById(R.id.btn_contest_info);
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,8 +105,10 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), CreateTeamActivity.class);
                 startActivity(intent);
+
+
             }
-        });*/
+        });
 
 
         /*//ListView01
