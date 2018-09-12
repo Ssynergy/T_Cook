@@ -1,5 +1,6 @@
 package com.example.uuzaz.teamcook02_specail;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -18,6 +19,7 @@ public class TabPagerAdapter_Main extends FragmentStatePagerAdapter {
         switch (position) {
             case 0:
                 Main_Fragment_INFO main_fragment_info = new Main_Fragment_INFO();
+
                 return main_fragment_info;
             case 1:
                 Main_Fragment_TeamSearch main_fragment_teamSearch = new Main_Fragment_TeamSearch();

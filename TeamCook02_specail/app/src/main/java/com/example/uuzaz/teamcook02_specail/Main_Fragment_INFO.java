@@ -19,7 +19,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter.ListBtnClickListener {
+public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter.ListBtnClickListener, Info_ListViewAdapter.ListBtnClickListener1
+        , Info_ListViewAdapter.ListBtnClickListener2{
 
     /*//ListView01
     static final String[] LIST_MENU = {"LIST1", "LIST2", "LIST3"};*/
@@ -40,8 +41,8 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
 
         // 아이템 생성.loadItemsFromDB
         item = new Info_ListItem() ;
-        item.setI_btn(R.drawable.info_pic);
-        item.setIcon( R.drawable.icon_love);
+        item.setI_btn(ContextCompat.getDrawable(getActivity(),R.drawable.info_pic));
+        item.setIcon(ContextCompat.getDrawable(getActivity(),R.drawable.icon_love));
         //item.setThe_day(Integer.toString(i) + "번 아이템입니다.");
         item.setThe_day("2018-09-15");
         item.setD_day("D - 9");
@@ -50,8 +51,8 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
         i++ ;
 
         item = new Info_ListItem() ;
-        item.setI_btn(R.drawable.info_pic01);
-        item.setIcon(R.drawable.icon_love);
+        item.setI_btn(ContextCompat.getDrawable(getActivity(),R.drawable.info_pic01));
+        item.setIcon(ContextCompat.getDrawable(getActivity(),R.drawable.icon_love));
         item.setThe_day("2018-09-27");
         item.setD_day("D - 21");
         item.setTitle("초 단편 영화 공모전");
@@ -59,8 +60,8 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
         i++ ;
 
         item = new Info_ListItem() ;
-        item.setI_btn(R.drawable.info_pic02);
-        item.setIcon(R.drawable.icon_love);
+        item.setI_btn(ContextCompat.getDrawable(getActivity(),R.drawable.info_pic02));
+        item.setIcon(ContextCompat.getDrawable(getActivity(),R.drawable.icon_love));
         item.setThe_day("2018-10-1");
         item.setD_day("D - 25");
         item.setTitle("대구 캐주얼 게임 공모전");
@@ -68,16 +69,16 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
         i++ ;
 
         item = new Info_ListItem() ;
-        item.setI_btn(R.drawable.info_pic03);
-        item.setIcon(R.drawable.icon_love);
+        item.setI_btn(ContextCompat.getDrawable(getActivity(),R.drawable.info_pic03));
+        item.setIcon(ContextCompat.getDrawable(getActivity(),R.drawable.icon_love));
         item.setThe_day("2018-10-8");
         item.setD_day("D - 32");
         item.setTitle("상반기 구민 아이디어 공모");
         list.add(item) ;
 
         item = new Info_ListItem() ;
-        item.setI_btn(R.drawable.info_pic04);
-        item.setIcon(R.drawable.icon_love);
+        item.setI_btn(ContextCompat.getDrawable(getActivity(),R.drawable.info_pic04));
+        item.setIcon(ContextCompat.getDrawable(getActivity(),R.drawable.icon_love));
         item.setThe_day("2018-10-22");
         item.setD_day("D - 46");
         item.setTitle("2018 강원 창의 디자인 공모전");
@@ -129,14 +130,14 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
         ListView listView;
 
         //Button 예시
-        final ArrayList<Info_ListItem> items = new ArrayList<Info_ListItem>() ;
+        ArrayList<Info_ListItem> items = new ArrayList<Info_ListItem>() ;
 
         // items 로드.
         loadItemsFromDB(items) ;
 
         //ListView02
         // Adapter 생성
-        adapter = new Info_ListViewAdapter(getActivity(), R.layout.listitem_info, items, this) ;
+        adapter = new Info_ListViewAdapter(getActivity(), R.layout.listitem_info, items, this,this,this) ;
 
         // 리스트뷰 참조 및 Adapter달기
         listView = (ListView) view.findViewById(R.id.list_info) ;
@@ -145,10 +146,10 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
         // Button 예시
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+            public void onItemClick(AdapterView parent, View v, int position, long id) {
                 // TODO : item click
 
-                // 상세정보 화면으로 이동하기(인텐트 날리기)
+                /*// 상세정보 화면으로 이동하기(인텐트 날리기)
                 // 1. 다음화면을 만든다
                 // 2. AndroidManifest.xml 에 화면을 등록한다
                 // 3. Intent 객체를 생성하여 날린다
@@ -166,7 +167,7 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
                 intent.putExtra("info_date", items.get(position).getThe_day());
                 intent.putExtra("d_day", items.get(position).getD_day());
 
-                startActivity(intent);
+                startActivity(intent);*/
 
             }
         }) ;
@@ -231,10 +232,39 @@ public class Main_Fragment_INFO extends Fragment implements Info_ListViewAdapter
 
     @Override
     public void onListBtnClick(int position) {
-        Intent intent = new Intent(getActivity(), ContestInfoDetail.class);
+
+        /*Intent intent = getActivity().getIntent(); //이 액티비티를 부른 인텐트를 받는다.
+        int bt = intent.getIntExtra("BIRTHDAY_KEY",0); //119 받아옴*/
+
+        /*switch (getId()){
+            case R.id.asda"" +
+
+        }*/
+        Intent intent = new Intent(getActivity(), CreateTeamActivity.class);
         startActivity(intent);
 
+
+
+
+
+       /* Intent intent0 = new Intent(getActivity(), ContestInfoDetail.class);
+        startActivity(intent0);
+        Intent intent = new Intent(getActivity(), CreateTeamActivity.class);
+        startActivity(intent);*/
+
         //Toast.makeText(getActivity(), Integer.toString(position+1) + " Item is selected..", Toast.LENGTH_SHORT).show() ;
+    }
+
+    @Override
+    public void onListBtnClick1(int position) {
+        Intent intent1 = new Intent(getActivity(), ContestInfoDetail.class);
+        startActivity(intent1);
+    }
+
+    @Override
+    public void onListBtnClick2(int position) {
+        Intent intent2 = new Intent(getActivity(), Main_Fragment_TeamSearch.class);
+        startActivity(intent2);
     }
 
     //ListView02

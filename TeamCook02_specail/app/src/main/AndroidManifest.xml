@@ -36,6 +36,7 @@
         <activity android:name=".ContestInfoDetail" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity"></activity>
+
     </application>
 
 </manifest>

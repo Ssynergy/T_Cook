@@ -3,16 +3,17 @@ package com.example.uuzaz.teamcook02_specail;
 import android.graphics.drawable.Drawable;
 
 public class Info_ListItem {
-    private int i_btnInt;
-    private int iconInt;
+    private Drawable i_btnDrawable;
+    private Drawable iconDrawable;
     private String titleStr;
     private String d_dayStr;
     private String the_dayStr;
 
-    public void setI_btn(int i_btn) { i_btnInt = i_btn; }
 
-    public void setIcon(int icon) {
-        iconInt = icon;
+    public void setI_btn(Drawable i_btn) { i_btnDrawable = i_btn; }
+
+    public void setIcon(Drawable icon) {
+        iconDrawable = icon;
     }
 
     public void setThe_day(String the_day) {
@@ -29,10 +30,10 @@ public class Info_ListItem {
 
 
 
-    public int getI_btn() { return this.i_btnInt; }
+    public Drawable getI_btn() { return this.i_btnDrawable; }
 
-    public int getIcon() {
-        return this.iconInt;
+    public Drawable getIcon() {
+        return this.iconDrawable;
     }
 
     public String getThe_day() {
@@ -47,3 +48,4 @@ public class Info_ListItem {
         return this.titleStr;
     }
 }
+
